@@ -9,6 +9,7 @@
 <body>
 
     <div class="content-container">
+
         <div class="left-panel">
             <button class="primary-buttons" id="all-button">
                 <img class="primary-logos" src="./assets/all.svg">
@@ -26,9 +27,30 @@
                 <img class="primary-logos" src="./assets/inbox.svg">
                 Inbox</button>
         </div>
-        <div class="task-panel">Tasks</div>
-        <div class="description-panel">Description</div>
-    </div>
 
+        <div class="task-panel">
+            <div class="add-task-container">
+                <button id="add-task-button">
+                    <img id="add-task-logo" src="./assets/add-task.svg">
+                    Add Task
+                </button>
+            </div>
+            <div class="task">
+                <div class="title-container">
+                    <input type="checkbox"><p class="title">Take a bath</p>
+                </div>
+                <p class="due-date">12/18/2023</p>
+            </div>
+            <div class="task">
+                <div class="title-container">
+                    <input type="checkbox"><p class="title">Eat breakfast</p>
+                </div>
+                <p class="due-date">12/18/2023</p>
+            </div>
+        </div>
+
+        <div class="description-panel">Description</div>
+
+    </div>
 </body>
 </html>

@@ -47,6 +47,32 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.task {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: .5rem;
+    margin-top: .5rem;
+}
+
+.title-container {
+    display: flex;
+    gap: .5rem;
+}
+
+input[type='checkbox'] {
+    accent-color: black;
+    width: 1rem;
+    height: 1rem;
+}
+
+input[type='checkbox']:hover {
+    cursor: pointer;
+    
 }
 
 .description-panel {
@@ -54,4 +80,29 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding-left: 1rem;
+}
+
+.add-task-container {
+    display: flex;
+    justify-content: center;
+}
+
+#add-task-button {
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 50%;
+}
+
+#add-task-button:hover {
+    cursor: pointer;
+    background-color: rgba(90, 90, 90, 50%);
+}
+
+#add-task-logo {
+    height: 1.5rem;
 }
