@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>To-Do App</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="index.js" defer></script>
 </head>
 <body>
 
@@ -52,5 +50,42 @@
         <div class="description-panel">Description</div>
 
     </div>
+
+    <dialog class="task-modal">
+        <form>
+            <div>
+                <label for="title">Title:</label>
+            </div>
+            <div>
+                <input type="text" id="title"  name="title" required>
+            </div>
+            <div>
+                <label for="dueDate">Due Date:</label>
+            </div>
+            <div>
+                <input type="date" id="dueDate" name="dueDate">
+            </div>
+            <div>
+                <label for="description">Description:</label>
+            </div>
+            <div>
+                <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                Priority:
+                <input type="radio" name="priority" id="low-priority">
+                <label for="low-priority" id="low-priority">Low</label>
+
+                <input type="radio" name="priority" id="med-priority">
+                <label for="med-priority" id="med-priority">Medium</label>
+
+                <input type="radio" name="priority" id="high-priority">
+                <label for="high-priority" id="high-priority">High</label>
+            </div>
+            <button class="add-button">Add</button>
+            <button class="cancel-button">Cancel</button>
+        </form>
+    </dialog>
+
 </body>
 </html>

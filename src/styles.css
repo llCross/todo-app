@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.task-modal {
+    --radio-padding: 5px 20px;
 }
 
 .content-container {
@@ -105,4 +110,71 @@ input[type='checkbox']:hover {
 
 #add-task-logo {
     height: 1.5rem;
+}
+
+.task-modal {
+    padding: 10px 10px 0px 10px;
+    height: 27rem;
+    width: 25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* radio button design start */
+input[type="radio"] {
+    display: none;
+}
+
+#low-priority {
+    color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: var(--radio-padding);
+}
+
+#med-priority {
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+    padding: var(--radio-padding);
+}
+
+#high-priority {
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: var(--radio-padding);
+}
+
+input[type="radio"]:checked + #low-priority {
+    background-color: green;
+    color: white;
+}
+
+input[type="radio"]:checked + #med-priority {
+    background-color: orange;
+    color: white;
+}
+
+input[type="radio"]:checked + #high-priority {
+    background-color: red;
+    color: white;
+}
+/* radio button design end */
+
+input[type="text"] {
+    height: 1.5rem;
+    width: 100%;
+}
+
+#description {
+    width: 100%;
 }
