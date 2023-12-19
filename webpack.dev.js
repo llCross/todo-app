@@ -9,6 +9,7 @@ module.exports = merge(common, {
     output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext][query]'
   },
     plugins: [new HtmlWebpackPlugin({
     template: "./src/template.html"
