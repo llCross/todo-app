@@ -4,11 +4,13 @@ export default function initializeModal() {
     const openModal = document.querySelector('#add-task-button');
     const closeModal = document.querySelector('.cancel-button');
 
-    openModal.addEventListener('click', () => {
+    openModal.addEventListener('click', (e) => {
+        e.preventDefault();
         taskModal.showModal();
     });
 
-    closeModal.addEventListener('click', () => {
+    closeModal.addEventListener('click', (e) => {
+        e.preventDefault();
         taskModal.close();
     });
 }
