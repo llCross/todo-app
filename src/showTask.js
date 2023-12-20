@@ -1,4 +1,5 @@
 import { myTask } from "./taskClass";
+import showDescription from "./showDescription";
 
 export default function showTask() {
 
@@ -14,6 +15,10 @@ export default function showTask() {
         
         let titleContainer = document.createElement('div');
         titleContainer.classList.add('title-container');
+
+        titleContainer.addEventListener('click', () => {
+            showDescription(i);
+        })
 
         let taskCheckbox = document.createElement("input");
         taskCheckbox.setAttribute("type", "checkbox");
