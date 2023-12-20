@@ -1,6 +1,7 @@
 import { Task } from "./taskClass";
 import { myTask } from "./taskClass";
 import showTask from "./showTask";
+import isValidForm from "./isValidForm";
 
 export default function addTask() {
     const submitButton = document.querySelector('.submit-button');
@@ -8,10 +9,9 @@ export default function addTask() {
     const taskForm = document.getElementById('task-form');
 
     submitButton.addEventListener('click', (event) => {
-        if (taskForm.checkValidity() === false) {
-            taskForm.reportValidity();
+        if (!isValidForm(taskForm)) {
             return;
-         }
+        };
         event.preventDefault();
 
         const title = document.querySelector('#title').value;
