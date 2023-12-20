@@ -130,7 +130,7 @@ form {
 
 /* radio button design start */
 input[type="radio"] {
-    display: none;
+    opacity: 0;
 }
 
 #low-priority {
