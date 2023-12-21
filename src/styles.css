@@ -69,6 +69,11 @@
     gap: .5rem;
 }
 
+.date-container {
+    display: flex;
+    gap: .5rem;
+}
+
 input[type='checkbox'] {
     accent-color: black;
     width: 1rem;
@@ -135,49 +140,54 @@ input[type="radio"] {
     opacity: 0;
 }
 
-#low-priority {
+#low {
     color: green;
     border: 1px solid green;
     border-radius: 5px;
     padding: var(--radio-padding);
 }
 
-#med-priority {
+#med {
     color: orange;
     border: 1px solid orange;
     border-radius: 5px;
     padding: var(--radio-padding);
 }
 
-#high-priority {
+#high {
     color: red;
     border: 1px solid red;
     border-radius: 5px;
     padding: var(--radio-padding);
 }
 
-input[type="radio"]:checked + #low-priority {
+input[type="radio"]:checked + #low {
     background-color: green;
     color: white;
 }
 
-input[type="radio"]:checked + #med-priority {
+input[type="radio"]:checked + #med {
     background-color: orange;
     color: white;
 }
 
-input[type="radio"]:checked + #high-priority {
+input[type="radio"]:checked + #high {
     background-color: red;
     color: white;
 }
-/* radio button design end */
 
+/* radio button design end */
 input[type="text"] {
     height: 1.5rem;
     width: 100%;
 }
 
-.title:hover {
+/* pointer cursor on hover effect */
+input[type='date'],
+.title:hover, 
+input[type='radio']:hover + #low,
+input[type='radio']:hover + #med,
+input[type='radio']:hover + #high {
     cursor: pointer;
 }
 
@@ -207,4 +217,30 @@ input[type="text"] {
     top: 5%;
     left: 8.5%;
     font-size: 1rem;
+}
+
+.low-priority {
+    background-color: green;
+    color: white;
+}
+
+.med-priority {
+    background-color: orange;
+    color: white;
+}
+
+.high-priority {
+    background-color: red;
+    color: white;
+}
+
+.low-priority,
+.med-priority,
+.high-priority {
+    width: 3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
 }

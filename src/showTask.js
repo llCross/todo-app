@@ -30,6 +30,21 @@ export default function showTask() {
         taskTitle.innerText = `${task.title}`;
         taskTitle.classList.add('title');
 
+        let dateContainer = document.createElement('div');
+        dateContainer.classList.add('date-container');
+
+        let taskPriority = document.createElement('div');
+        taskPriority.classList.add('task-priority');
+        taskPriority.innerText = task.priority.toUpperCase();
+        
+        if (task.priority === 'high') {
+            taskPriority.classList.add('high-priority');
+        } else if (task.priority === 'med') {
+            taskPriority.classList.add('med-priority');
+        } else {
+            taskPriority.classList.add('low-priority');
+        }
+
         let taskDate = document.createElement('p');
         taskDate.innerText = `${task.dueDate}`;
         taskDate.classList.add('due-date');
@@ -38,6 +53,8 @@ export default function showTask() {
         taskContent.appendChild(titleContainer);
         titleContainer.appendChild(taskCheckbox);
         titleContainer.appendChild(taskTitle);
-        taskContent.appendChild(taskDate);
+        taskContent.appendChild(dateContainer);
+        dateContainer.appendChild(taskPriority);
+        dateContainer.appendChild(taskDate);
     }
 }
