@@ -12,7 +12,7 @@ class Task {
 
     completed(event) {
         this.complete = !this.complete;
-        console.log('complete!')
+        console.log('task complete!')
     }
 }
 

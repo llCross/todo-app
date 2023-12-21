@@ -1,5 +1,6 @@
 import { myTask } from "./taskClass";
 import showDescription from "./showDescription";
+import removeTask from "./removeTask";
 
 export default function showTask() {
 
@@ -9,6 +10,7 @@ export default function showTask() {
 
     for (let i = 0; i < myTask.length; i++) {
         let task = myTask[i];
+        let index = i
 
         let taskContent = document.createElement('div');
         taskContent.classList.add('task');
@@ -23,7 +25,10 @@ export default function showTask() {
         let taskCheckbox = document.createElement("input");
         taskCheckbox.setAttribute("type", "checkbox");
         taskCheckbox.addEventListener('click', () => {
-            myTask[i].completed();
+            removeTask(index);
+            showTask();
+            task.completed();
+            console.log(myTask);
         });
 
         let taskTitle = document.createElement('p');
