@@ -6,7 +6,7 @@ export default function showDescription(index) {
     descriptionPanel.innerHTML = '';
 
     let descriptionTitle = document.createElement('p');
-
+    descriptionTitle.classList.add('description-title');
     let descriptionBody = document.createElement('p');
     descriptionBody.classList.add('description-body');
     let noDescription = document.createElement('p');
