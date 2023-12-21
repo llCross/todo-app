@@ -19,7 +19,7 @@ export default function showDescription(index) {
         descriptionPanel.appendChild(descriptionBody);
         return;
     }   else {
-        noDescription.innerText = 'Descriptions will show here!';
+        noDescription.innerText = 'Click a task! Descriptions will show here!';
         descriptionPanel.appendChild(noDescription);
     }
 }
