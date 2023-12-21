@@ -3,7 +3,7 @@ import { myTask } from "./taskClass";
 import showTask from "./showTask";
 import isValidForm from "./isValidForm";
 
-export default function addTask() {
+export default function addTask(title, dueDate, description, priority) {
     const submitButton = document.querySelector('.submit-button');
     const taskModal = document.querySelector('.task-modal');
     const taskForm = document.getElementById('task-form');
@@ -14,10 +14,10 @@ export default function addTask() {
         };
         event.preventDefault();
 
-        const title = document.querySelector('#title').value;
-        const dueDate = document.querySelector('#dueDate').value;
-        const description = document.querySelector('#description').value;
-        const priority = document.querySelector('input[name="priority"]:checked').value;
+        title = document.querySelector('#title').value;
+        dueDate = document.querySelector('#dueDate').value;
+        description = document.querySelector('#description').value;
+        priority = document.querySelector('input[name="priority"]:checked').value;
         const complete = false;
         let newTask = new Task(title, dueDate, description, priority, complete)
         myTask.push(newTask);
