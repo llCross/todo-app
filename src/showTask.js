@@ -1,8 +1,11 @@
 import { myTask } from "./taskClass";
 import showDescription from "./showDescription";
 import removeTask from "./removeTask";
+import sortTask from "./sortTask";
+
 
 export default function showTask() {
+    myTask.sort(sortTask);
 
     let taskContainer = document.querySelector('.task-container');
 
