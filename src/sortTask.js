@@ -1,9 +1,5 @@
+const { compareAsc } = require("date-fns");
+
 export default function sortTask(a, b) {
-    if (a.dueDate > b.dueDate) {
-        return 1;
-    } else if (a.dueDate < b.dueDate) {
-        return -1;
-    } else {
-        return 0;
-    }
+    return compareAsc(new Date(a.dueDate), new Date(b.dueDate));
 }
