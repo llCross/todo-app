@@ -21,7 +21,7 @@ export default function addTask(title, dueDate, description, priority) {
         const complete = false;
         let newTask = new Task(title, dueDate, description, priority, complete)
         myTask.push(newTask);
-        showTask();
+        showTask(myTask);
         taskModal.close();
 
         document.querySelector('#title').value = '';
