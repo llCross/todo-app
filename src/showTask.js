@@ -1,18 +1,16 @@
-import { myTask } from "./taskClass";
 import showDescription from "./showDescription";
 import removeTask from "./removeTask";
 import sortTask from "./sortTask";
 
-
-export default function showTask() {
-    myTask.sort(sortTask);
+export default function showTask(tasks) {
+    tasks.sort(sortTask);
 
     let taskContainer = document.querySelector('.task-container');
 
     taskContainer.innerText = '';
 
-    for (let i = 0; i < myTask.length; i++) {
-        let task = myTask[i];
+    for (let i = 0; i < tasks.length; i++) {
+        let task = tasks[i];
 
         let taskContent = document.createElement('div');
         taskContent.classList.add('task');
@@ -28,9 +26,9 @@ export default function showTask() {
         taskCheckbox.setAttribute("type", "checkbox");
         taskCheckbox.addEventListener('click', () => {
             removeTask(i);
-            showTask();
+            showTask(tasks);
             task.completed();
-            console.log(myTask);
+            console.log(tasks);
         });
 
         let taskTitle = document.createElement('p');

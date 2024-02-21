@@ -12,6 +12,6 @@ export default function pageLoad() {
     initializeButtons();
     initializeModal();
     addTask();
-    showTask();
+    showTask(myTask);
     showDescription();
 }
